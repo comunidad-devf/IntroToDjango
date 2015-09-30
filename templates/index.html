@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static from staticfiles %}
     <meta charset="UTF-8" />
     <title>Pablo Trinidad</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css" media="screen" />
-    <link rel="stylesheet" href="css/master.css" />
-    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <link rel="stylesheet" href="{% static "css/master.css" %}"/>
+    <link href="{% static "img/favicon.ico" %}" rel="shortcut icon" type="image/x-icon"/>
 </head>
 <body>
     <div class="container">
@@ -22,7 +23,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="img/me.jpg" />
+                            <img src="{% static "img/me.jpg" %}" />
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <h2>Pablo Trinidad</h2>
@@ -41,7 +42,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="img/me.jpg" />
+                            <img src="{% static "img/me.jpg" %}" />
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <h2>Pablo Trinidad</h2>
@@ -60,7 +61,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="img/me.jpg" />
+                            <img src="{% static "img/me.jpg" %}" />
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <h2>Pablo Trinidad</h2>
@@ -79,7 +80,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="img/me.jpg" />
+                            <img src="{% static "img/me.jpg" %}" />
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <h2>Pablo Trinidad</h2>
@@ -98,7 +99,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="img/me.jpg" />
+                            <img src="{% static "img/me.jpg" %}" />
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
                             <h2>Pablo Trinidad</h2>
