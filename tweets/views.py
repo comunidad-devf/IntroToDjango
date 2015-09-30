@@ -1,3 +1,12 @@
-from django.shortcuts import render
+"""Tweets views."""
 
-# Create your views here.
+from django.shortcuts import render
+from models import Tweet
+
+
+def home(request):
+    """Home View for / URL."""
+    context = {
+        'tweets': Tweet.objects.all()
+    }
+    return render(request, 'index.html', context)
