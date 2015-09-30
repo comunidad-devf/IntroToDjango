@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static from staticfiles %}
+    <meta charset="UTF-8" />
+    <title>Pablo Trinidad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" href="{% static "css/master.css" %}"/>
+    <link href="{% static "img/favicon.ico" %}" rel="shortcut icon" type="image/x-icon"/>
+</head>
+<body>
+    <div class="container">
+        <header class="jumbotron">
+            <h1>@PabloTrinidadPa</h1>
+            <p>
+                Back-End developer and server infrastructure enthusiast.
+            </p>
+        </header>
+        <section>
+            {% for tweet in tweets %}
+                <article class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <img src="{% static "img/me.jpg" %}" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                <h2>Pablo Trinidad</h2>
+                                <p class="no-margin">
+                                    <a href="/">@PabloTrinidadPa</a> | {{ tweet.created }}
+                                </p>
+                                <p class="no-margin">
+                                    {{ tweet.text }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+        </section>
+    </div>
+</body>
+</html>
