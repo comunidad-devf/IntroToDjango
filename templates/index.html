@@ -19,101 +19,26 @@
             </p>
         </header>
         <section>
-            <article class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="{% static "img/me.jpg" %}" />
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                            <h2>Pablo Trinidad</h2>
-                            <p class="no-margin">
-                                <a href="/">@PabloTrinidadPa</a> | 
-                                27/09/2015 <span class="bolder" >06:15 PM</span>
-                            </p>
-                            <p class="no-margin">
-                                It should be possible to fork Spotify playlists and then be able to pull request them to the original authors. It'll be great!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="{% static "img/me.jpg" %}" />
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                            <h2>Pablo Trinidad</h2>
-                            <p class="no-margin">
-                                <a href="/">@PabloTrinidadPa</a> | 
-                                20/09/2015 <span class="bolder" >03:56 AM</span>
-                            </p>
-                            <p class="no-margin">
-                                The European Refugee Crisis and Syria Explained <a href="https://www.youtube.com/watch?v=RvOnXh3NN9w">https://www.youtube.com/watch?v=RvOnXh3NN9w</a>
-                            </p>
+            {% for tweet in tweets %}
+                <article class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                <img src="{% static "img/me.jpg" %}" />
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                                <h2>Pablo Trinidad</h2>
+                                <p class="no-margin">
+                                    <a href="/">@PabloTrinidadPa</a> | {{ tweet.created }}
+                                </p>
+                                <p class="no-margin">
+                                    {{ tweet.text }}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article>
-            <article class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="{% static "img/me.jpg" %}" />
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                            <h2>Pablo Trinidad</h2>
-                            <p class="no-margin">
-                                <a href="/">@PabloTrinidadPa</a> | 
-                                08/09/2015 <span class="bolder" >03:46 PM</span>
-                            </p>
-                            <p class="no-margin">
-                                Best career advice I have: learn BOTH how to build things and how to understand people (to create products for them, manage them, etc.)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="{% static "img/me.jpg" %}" />
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                            <h2>Pablo Trinidad</h2>
-                            <p class="no-margin">
-                                <a href="/">@PabloTrinidadPa</a> | 
-                                07/09/2015 <span class="bolder" >10:30 AM</span>
-                            </p>
-                            <p class="no-margin">
-                                'I've been a very bad girl,' she said, biting her lip. 'I need to be punished.' 'Very well,' he said and installed Windows 10 on her laptop.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                            <img src="{% static "img/me.jpg" %}" />
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                            <h2>Pablo Trinidad</h2>
-                            <p class="no-margin">
-                                <a href="/">@PabloTrinidadPa</a> | 
-                                02/09/2015 <span class="bolder" >09:27 AM</span>
-                            </p>
-                            <p class="no-margin">
-                                US President @BarackObama knows how not to sort a million of 32-bits integers. Our president is not that brilliant. <a href="https://www.youtube.com/watch?v=k4RRi_ntQc8">https://www.youtube.com/watch?v=k4RRi_ntQc8</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
+                </article>
+            {% endfor %}
         </section>
     </div>
 </body>
